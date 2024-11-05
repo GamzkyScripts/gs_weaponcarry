@@ -111,7 +111,7 @@ end)
 function DoesPlayerHaveWeapon(itemName)
     -- Handle the case if ox_inventory is used
     if (GetResourceState('ox_inventory') == 'started') then
-        return exports.ox_inventory.GetItemCount(itemName) > 0
+        return exports.ox_inventory:GetItemCount(itemName) > 0
     end
 
     -- Handle the case if es_extended or qb-core is used
