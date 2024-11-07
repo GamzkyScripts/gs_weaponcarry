@@ -177,7 +177,12 @@ end
 -- This function gets the configured weapon position on the body, based on clothing
 function GetWeaponPositionInfo(clothingPositions)
     -- Pick the default position based on the gender
-    local gender = IsPedMale(PlayerPedId()) and 'male' or 'female'
+    local ped = PlayerPedId()
+    local pedModel = GetEntityModel(ped)
+    local gender = 'male'
+    if (not IsPedMale(ped) or pedModel == `mp_f_freemode_01`) then
+        gender = 'female'
+    end
     local weaponPosition = clothingPositions[gender].default
 
     -- If skinchanger is used, we can define a position based on the clothing of the player
@@ -187,7 +192,8 @@ function GetWeaponPositionInfo(clothingPositions)
             Wait(0)
 
             TriggerEvent("skinchanger:getSkin", function(skin)
-                local gender = skin.sex and 'male' or 'female'
+                local gender = 'male'
+                if (skin.sex == 1) then gender = 'female' end
                 weaponPosition = clothingPositions[gender].default
 
                 -- Loop over the configured clothing types (so tshirt_1, or bproof_1 for instance)
