@@ -1,6 +1,6 @@
 # Weapon Carry Script
 
-#### ⭐ Check out our other resources on [Tebex](https://gamzky-scripts.tebex.io/) or in our [Discord](https://discord.com/invite/sjFP3HrWc3).
+#### ⭐ Check out our other resources on [gamzkystore.com](https://gamzkystore.com/) or in our [Discord](https://discord.com/invite/sjFP3HrWc3).
 #### 📼 Preview video: [Youtube](https://www.youtube.com/watch?v=guhRcpf_r-Q)
 
 There are already quite some 'weapon-carry' scripts available, but I often found them to be either, buggy, lacking in features or badly optimized. So I decided to create a version of my own.
